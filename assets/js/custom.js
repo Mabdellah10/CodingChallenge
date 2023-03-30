@@ -105,12 +105,12 @@ var rows = data.map(item => getItemMapping(item));
 document.getElementById('table-body').innerHTML = rows.join('');
 
 
-//pagination 
+
 var current_page = 1;
-//record per page
+
 var records_per_page = 5;
 
-// Can be obtained from another source, such as your data variable
+
 
 function prevPage()
 {
@@ -139,7 +139,7 @@ function changePage(page)
     var listing_table = document.getElementById("table-body");
     var page_span = document.querySelector(".div-ul-count");
 
-    // Validate page
+    
     if (page < 1) page = 1;
     if (page > numPages()) page = numPages();
 
@@ -149,7 +149,7 @@ function changePage(page)
         listing_table.innerHTML += getItemMapping(data[i]);
     }
 
-    //mapping count
+    
     var countAllPages = numPages();
     var result = '';
     var itemCount = (x) => {
